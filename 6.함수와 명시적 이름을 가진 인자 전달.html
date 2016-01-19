@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /*
+        함수 호출 시 매개변수를 객체로 전달하여,
+        메소드 내에서 전달된 프로퍼티를 인자로 활용하는 경우.
+         */
+
+        function power(arg){
+            //매개변수 arg로 전달된 객체에
+            //base 프로퍼티가 정의되어 있지 않을 때
+            //base 프로퍼티를 추가하며 1로 설정함.
+            if(!arg.base)
+                arg.base=1;
+
+            //매개변수 arg로 전달된 객체에
+            //exponent 프로퍼티가 정의되어 있지 않을 때
+            //exponent 프로퍼티를 추가하며 0로 설정함.
+            if(!arg.exponent)
+                arg.exponent=0;
+            return Math.pow(arg.base, arg.exponent);
+        }
+
+        document.write('power({base:3, exponent:2})의 결과 값 : '
+                        +power({base:3, exponent:2})+ '<br/>');
+
+        document.write('power({base:3})의 결과 값 : '
+                +power({base:3})+ '<br/>');
+
+        document.write('power({exponent:2})의 결과 값 : '
+                +power({exponent:2})+ '<br/>');
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

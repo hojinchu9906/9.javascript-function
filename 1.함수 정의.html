@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+       /*
+        1.함수 정의
+          로직 처리하여 결과를 반환하도록 만든,
+          여러번에 걸쳐 호출에 의해 실행될 수 있는
+          코드 블록.
+
+          함수는 매개변수(parameter) 혹은 전달인자(arguments)로
+          불리는 지역변수를 가질수 있는데, 이 매개변수는
+          함수를 호출하는 시점에 값을 갖게 됨.
+
+          함수는 반환값을 가질수  있는데,
+          반환값은 return문에 의해 함수를 호출한 표현식의
+          결과로 전달함.
+
+       2.함수를 정의하는 방법(3가지)
+          1)function 문을 이용해 함수를 정의
+
+            function 함수명([매개변수 목록]) {
+                문장들
+                [return 반환값;]
+            }
+
+          2)함수 리터럴을 이용해 함수를 정의
+
+            var 변수명 =  function 함수명([매개변수 목록]) {
+                            문장들
+                            [return 반환값;]
+                        }
+
+           3)Function 생성자를 이용해 함수를 정의
+               var 변수명 = new Function(['매개변수',],'문장들');
+
+         */
+        //함수 정의와 호출
+        function print(message){
+            document.write(message);
+        }
+
+       function println(message){
+           document.write(message +'<br>');
+       }
+
+
+       var pointA = { x:25, y:40};
+       var pointB = { x:50, y:80};
+
+       print('pointA와 pointB 사이의 거리: ');
+       println(distance(pointA,pointB));
+
+       var triangle= Function('base','height','return(base*height)/2;');
+        print('base와 height로 구성한 삼각형의 넓이');
+        println(triangle(30,20));
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

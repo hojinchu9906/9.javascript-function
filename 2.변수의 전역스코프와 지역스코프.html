@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /*
+         -스코프(scope)
+            : 코드에서 변수를 참조할 수 있는
+            해당 변수의 유효 범위를 결정하는 개념.
+            1)전역(global) 스코프 ==> 전역변수
+            2)지역(local) 스코프 ==> 지역변수
+
+         */
+        //전역 스코프를 가진 전역 변수
+        var x='global x';
+        var y='global y';
+
+        function func(){
+            //지역 스코프를 가진 지역 변수
+            //반드시 var 키워드와 함께 선언되어야 함.
+            var x='local x';
+            //
+            y='???';
+            document.write('x: ' +x+ '<br/>');
+            document.write('y: ' +y+ '<br/>');
+            document.write('<br/>');
+        }
+
+        document.write('func() 호출 전 <br/>');
+        document.write('x: ' +x+ '<br/>');
+        document.write('y: ' +y+ '<br/>');
+        document.write('<br/>');
+
+        document.write('func() 호출 <br/>');
+        func();
+
+        document.write('func() 호출 후 <br/>');
+        document.write('x: ' +x+ '<br/>');
+        document.write('y: ' +y+ '<br/>');
+        document.write('<br/>');
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

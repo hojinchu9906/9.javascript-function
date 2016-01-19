@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /*
+        예외
+           - 예외란 예외적인 상황이나 에러가 발생했음을 나타내는 객체.
+           - 자바스크립트는 런타임에서 에러가 발생할 때마다 예외를 발생시킴.
+           - 프로그램에서 throw문을 사용하여 명시적으로 예외를 발생시킬수도 있음.
+           - throw문에서 사용하는 표현식의 결과 타입
+                : 대부분 Error 객체 혹은 Error 객체를 상속받은 객체.
+                  에러메시지를 담은 문자열이나
+                  에러코드를 나타내는 숫자값도 유용하게 사용.
+                 - throw 표현식:
+                    throw new Error('에러메시지')
+
+            - try{
+                    //정상적으로 처리되어야 할 코드들을 기술함.
+
+                 }  catch(e) {
+                    // 예외가 발생할 경우에만 실행되는 블록.
+
+                 }  finally {
+                    // 무조건 실행이 필요한 코드를 이 블록에 기술함.
+                 }
+         */
+
+        var x=5;
+        var result;
+
+        try{
+            document.writeln('\u2460 <br/>');
+            result=x*y;     //런타임 에러 발생
+
+            document.writeln('\u2461' +result+ '<br/>');
+
+        } catch(e){
+            document.writeln('\u2462' +e+ '<br/>');
+        } finally{
+            document.writeln('\u2463 <br/>');
+        }
+
+
+        try{
+            document.writeln('\u2460 <br/>');
+            result=x/0;
+            document.writeln('\u2461' +result+ '<br/>');
+            //예외 객체를 만들어 던짐.
+            throw new Error('0으로 나눌 수 없습니다.');
+
+        } catch(e){
+            document.writeln('\u2462 ' +e+ '<br/>');
+        } finally{
+            document.writeln('\u2463 <br/>');
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
